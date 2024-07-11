@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+
+  <!-- Greeting Category -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hello! I am a career advisor chatbot that focuses on computer science-related careers. What is your name?
+    </template>
+  </category>
+
+  <category>
+    <pattern>HI</pattern>
+    <template>
+      Hello! I am a career advisor chatbot that focuses on computer science-related careers. What is your name?
+    </template>
+  </category>
+
+  <!-- Respond to User's Name -->
+  <category>
+    <pattern>MY NAME IS *</pattern>
+    <template>
+      Nice to meet you, <star />! Do you know which computer science field you would like to work in? Please select 'Yes' or 'No' to proceed or type 'start over' at any time in the process to start over.
+      <button>
+        <text>Yes</text>
+        <postback>YES</postback>
+      </button>
+      <button>
+        <text>No</text>
+        <postback>NO</postback>
+      </button>
+    </template>
+  </category>
+  
+    <!-- Respond to User's Name -->
+  <category>
+    <pattern>IT IS *</pattern>
+    <template>
+      Nice to meet you, <star />! Do you know which computer science field you would like to work in? Please select 'Yes' or 'No' to proceed or type 'start over' at any time in the process to start over.
+      <button>
+        <text>Yes</text>
+        <postback>YES</postback>
+      </button>
+      <button>
+        <text>No</text>
+        <postback>NO</postback>
+      </button>
+    </template>
+  </category>
+  
+    <!-- Respond to User's Name -->
+  <category>
+    <pattern>START OVER</pattern>
+    <template>
+      Do you know which computer science field you would like to work in? Please select 'Yes' or 'No' to proceed or type 'start over' at any time in the process to start over.
+      <button>
+        <text>Yes</text>
+        <postback>YES</postback>
+      </button>
+      <button>
+        <text>No</text>
+        <postback>NO</postback>
+      </button>
+    </template>
+  </category>
+  
+<!-- Yes Response -->
+<category>
+  <pattern>YES</pattern>
+  <template>
+    Please select one of the following options to see more details:
+    <button>
+      <text>Software Engineer/Developer</text>
+      <postback>SOFTWAREENGINEERDEVELOPER</postback>
+    </button>
+    <button>
+      <text>Web Developer</text>
+      <postback>WEBDEVELOPER1</postback>
+    </button>
+    <button>
+      <text>UX Designer</text>
+      <postback>UXDESIGNER</postback>
+    </button>
+    <button>
+      <text>IT Project Manager</text>
+      <postback>ITPROJECTMANAGER</postback>
+    </button>
+    <button>
+      <text>Information Security Analyst</text>
+      <postback>INFORMATIONSECURITYANALYST</postback>
+    </button>
+    <br/>
+    <br/>
+    To start the process again, please type 'start over' at any time.
+  </template>
+</category>
+
+<!-- Software Engineer/Developer selection -->
+<category>
+  <pattern>SOFTWAREENGINEERDEVELOPER</pattern>
+  <template>
+    Becoming a Software Engineer/Developer is a great choice. Please click on the link below to see more details on this career choice:
+    <br/>
+    <br/>
+    <a href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm">More details about becoming a Software Engineer/Developer</a>
+  </template>
+</category>
+
+<!-- Software Engineer/Developer selection -->
+<category>
+  <pattern>WEBDEVELOPER1</pattern>
+  <template>
+    Becoming a Web Developer is a great choice. Please click on the link below to see more details on this career choice:
+    <br/>
+    <br/>
+    <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm">More details about becoming a Web Developer</a>
+  </template>
+</category>
+
+<!-- Software Engineer/Developer selection -->
+<category>
+  <pattern>UXDESIGNER</pattern>
+  <template>
+    Becoming a UX Designer is a great choice. Please click on the link below to see more details on this career choice:
+    <br/>
+    <br/>
+    <a href="https://careerfoundry.com/en/blog/ux-design/what-does-a-ux-designer-actually-do/">More details about becoming a UX Designer</a>
+  </template>
+</category>
+
+<!-- Software Engineer/Developer selection -->
+<category>
+  <pattern>ITPROJECTMANAGER</pattern>
+  <template>
+    Becoming a IT Project Manager is a great choice. Please click on the link below to see more details on this career choice:
+    <br/>
+    <br/>
+    <a href="https://www.comptia.org/blog/your-next-move-it-project-manager">More details about becoming an IT Project Manager</a>
+  </template>
+</category>
+
+<!-- Software Engineer/Developer selection -->
+<category>
+  <pattern>INFORMATIONSECURITYANALYST</pattern>
+  <template>
+    Becoming a Information Security Analyst is a great choice. Please click on the link below to see more details on this career choice:
+    <br/>
+    <br/>
+    <a href="https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm">More details about becoming an Information Security Analyst</a>
+  </template>
+</category>
+
+  <!-- No Response -->
+  <category>
+    <pattern>NO</pattern>
+    <template>
+      No worries! I can help you explore different computer science related career paths. Would you like to take a quick aptitude test to see which career path suits you best?
+      <button>
+        <text>Yes</text>
+        <postback>YESTOTEST</postback>
+      </button>
+      <button>
+        <text>No</text>
+        <postback>NOTOTEST</postback>
+      </button>
+    </template>
+  </category>
+  
+    <!-- No to Test -->
+  <category>
+    <pattern>NOTOTEST</pattern>
+    <template>
+      Okay, no problem. We hope to see you again in the future. Have a great day!
+    </template>
+  </category>
+  
+<!-- Yes to Test -->
+<category>
+  <pattern>YESTOTEST</pattern>
+  <template>
+    Great! Let's get started. Please answer the following questions to help me suggest a suitable career path for you.
+    <br/><br/>
+    Question 1: Do you enjoy problem-solving and coding?
+    <button>
+      <text>Yes</text>
+      <postback>PROBLEMSOLVINGCODING</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTPROBLEMSOLVINGCODING</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Response based on Problem Solving and Coding -->
+<category>
+  <pattern>PROBLEMSOLVINGCODING</pattern>
+  <template>
+    It sounds like you enjoy problem-solving and coding. Software Engineer/Developer might be a good fit for you.
+
+    <br/><br/>
+    Would you like more information about becoming a Software Engineer/Developer?
+    <button>
+      <text>Yes</text>
+      <postback>SOFTWAREENGINEERDEVELOPER</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>YES</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Response based on Not Interested in Problem Solving and Coding -->
+<category>
+  <pattern>NOTPROBLEMSOLVINGCODING</pattern>
+  <template>
+    It seems like problem-solving and coding may not be your preference. Let's explore other options.
+
+    <br/><br/>
+    Question 2: Do you enjoy designing and creating user interfaces?
+    <button>
+      <text>Yes</text>
+      <postback>DESIGNINGUI</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTDESIGNINGUI</postback>
+    </button>
+  </template>
+</category>
+
+
+<!-- Response based on Designing UI -->
+<category>
+  <pattern>DESIGNINGUI</pattern>
+  <template>
+    You enjoy designing and creating user interfaces. UX Designer might be a good fit for you.
+
+    <br/><br/>
+    Would you like more information about becoming a UX Designer?
+    <button>
+      <text>Yes</text>
+      <postback>UXDESIGNER</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>YES</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Not Interested in UX Design -->
+<category>
+  <pattern>NOTDESIGNINGUI</pattern>
+  <template>
+    It seems like designing user interfaces may not be your preference. Let's consider other options.
+
+    <br/><br/>
+    Question 3: Do you enjoy managing projects and teams?
+    <button>
+      <text>Yes</text>
+      <postback>MANAGINGPROJECTS</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTMANAGINGPROJECTS</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Response based on Managing Projects -->
+<category>
+  <pattern>MANAGINGPROJECTS</pattern>
+  <template>
+    You enjoy managing projects and teams. IT Project Manager might be a good fit for you.
+
+    <br/><br/>
+    Would you like more information about becoming an IT Project Manager?
+    <button>
+      <text>Yes</text>
+      <postback>ITPROJECTMANAGER</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>YES</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Not Interested in Managing Projects -->
+<category>
+  <pattern>NOTMANAGINGPROJECTS</pattern>
+  <template>
+    It seems like managing projects and teams may not be your preference. Let's explore another option.
+
+    <br/><br/>
+    Question 4: Are you interested in ensuring the security of computer systems and data?
+    <button>
+      <text>Yes</text>
+      <postback>SECURITYANALYST</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTSECURITYANALYST</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Response based on Security Analyst -->
+<category>
+  <pattern>SECURITYANALYST</pattern>
+  <template>
+    Ensuring the security of computer systems and data interests you. Information Security Analyst might be a good fit for you.
+
+    <br/><br/>
+    Would you like more information about becoming an Information Security Analyst?
+    <button>
+      <text>Yes</text>
+      <postback>INFORMATIONSECURITYANALYST</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>YES</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Not Interested in Security Analyst -->
+<category>
+  <pattern>NOTSECURITYANALYST</pattern>
+  <template>
+    It seems like ensuring security of computer systems and data may not be your preference. Let's consider other options.
+
+    <br/><br/>
+    Question 5: Do you enjoy building websites and web applications?
+    <button>
+      <text>Yes</text>
+      <postback>WEBDEVELOPER1</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTWEBDEVELOPER</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Response based on Web Developer -->
+<category>
+  <pattern>WEBDEVELOPER</pattern>
+  <template>
+    Working on web development projects interests you. Web Developer might be a good fit for you.
+
+    <br/><br/>
+    Would you like more information about becoming a Web Developer?
+    <button>
+      <text>Yes</text>
+      <postback>WEBDEVELOPER</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>YES</postback>
+    </button>
+  </template>
+</category>
+
+<!-- Not Interested in Web Developer -->
+<category>
+  <pattern>NOTWEBDEVELOPER</pattern>
+  <template>
+    It seems like web development may not be your preference. Would you like to retake the computer science aptitude test?
+    <button>
+      <text>Yes</text>
+      <postback>YESTOTEST</postback>
+    </button>
+    <button>
+      <text>No</text>
+      <postback>NOTOTEST</postback>
+    </button>
+  </template>
+</category>
+  
+
+</aiml>
